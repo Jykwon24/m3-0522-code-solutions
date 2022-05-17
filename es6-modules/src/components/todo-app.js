@@ -1,5 +1,5 @@
 // const { createElement, noop } = require('../lib');
-import { createElement, noop } from '../lib/index';
+import { createElement, noop } from '../lib';
 
 // const TodoList = require('./todo-list');
 // const TodoForm = require('./todo-form');

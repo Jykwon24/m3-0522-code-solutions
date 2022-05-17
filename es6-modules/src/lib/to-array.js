@@ -1,4 +1,4 @@
-export function toArray(value) {
+export default function toArray(value) {
   return Array.isArray(value) ? value : [value];
 }
 
