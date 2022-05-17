@@ -1,6 +1,6 @@
 // const { createElement } = require('../lib');
 
-import { createElement } from '../lib/index';
+import { createElement } from '../lib/';
 
 export default class TodoList {
   constructor(onToggle) {
