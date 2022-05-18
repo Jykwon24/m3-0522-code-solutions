@@ -1,5 +1,5 @@
 import React from 'react';
-import * as ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 
 const container = document.querySelector('#root');
 
