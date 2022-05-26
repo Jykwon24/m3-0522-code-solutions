@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.word {
+  margin-left: 20px;
+}
+
+.switch-container {
+  position: relative;
+  border: solid;
+  width: 200px;
+  height: 100px;
+  border-radius: 30px;
+}
+
+.switch {
+  position: absolute;
+  background-color: lightgrey;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.on {
+  left: 100px;
+}
+
+.back-on {
+  background-color: green;
+}
+
+.back-off {
+  background-color: grey;
+}
