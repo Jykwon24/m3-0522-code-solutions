@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watch {
+  border: solid;
+  border-color: black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.counter {
+  position: relative;
+  left: 95px;
+  top: 60px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.start {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.stop {
+  display: none !important;
+}
