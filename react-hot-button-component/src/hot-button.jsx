@@ -1,16 +1,15 @@
 import React from 'react';
 
-let clicks = 0;
 export default class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = { clickCounter: clicks };
+    this.state = { clickCounter: 0 };
 
   }
 
   handleClick() {
-    this.setState({ clickCounter: clicks++ });
+    this.setState({ clickCounter: this.state.clickCounter + 1 });
   }
 
   render() {
