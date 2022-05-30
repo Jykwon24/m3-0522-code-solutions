@@ -8,7 +8,8 @@ export default class ToggleSwitch extends React.Component {
   }
 
   handleClick() {
-    this.state.isClicked ? this.setState({ isClicked: false }) : this.setState({ isClicked: true });
+    // this.state.isClicked ? this.setState({ isClicked: false }) : this.setState({ isClicked: true });
+    this.setState({ isClicked: !this.state.isClicked });
   }
 
   render() {
