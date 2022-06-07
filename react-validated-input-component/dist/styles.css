@@ -1,0 +1,25 @@
+.hidden {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+}
+
+.active-check {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: greenyellow;
+}
+
+.active-error {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: red;
+}
+
+.alert-message {
+  margin-top: 0.1rem;
+  color: red;
+  font-size: 0.9rem;
+}
