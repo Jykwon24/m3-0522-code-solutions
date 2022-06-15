@@ -92,7 +92,7 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    const todosArray = this.state.todos;
+    const todosArray = [...this.state.todos];
     let index;
     const todoObject = {};
     for (let i = 0; i < todosArray.length; i++) {
@@ -120,7 +120,6 @@ export default class App extends React.Component {
         this.setState({ todos: todosArray });
       })
       .catch(error => console.error('Error:', error));
-
   }
 
   render() {
