@@ -3,4 +3,41 @@ User sign up
   password along with an anchor tag and the submit button for the form. Within
   the form component there are a few methods used to handle changes to the form's
   state which is an object containing properties of username and password. Both
-  properties are set to an initial value of an empty string.
+  properties are set to an initial value of an empty string. We target the value
+  of the inputs with the handleChange method and update the state for the
+  username and password accordingly. Once we submit the form, we have a handleSubmit
+  method that takes the props value of action(route.path). Once we submit, the
+  handleSubmit method sends a post fetch request to our server indicating the
+  action property of this.props as 'sign-up' and the req body containing the state
+  username and password values. The post request hits our route that includes 'sign-up'
+  in our server index.js. It hashes the password value and creates a SQL query
+  which enters in our user name and the hashed password into our postgresql database along
+  with a userId.
+
+User sign-in
+  - User will first need to see which page the browser is on, if the hash location
+  is set to 'sign-up', they will switch over to the 'sign in' page of the app. which
+  also updates the action property to sign-in. The form component takes in the
+  input values for username and password and submits. On the submit we send a fetch
+  request with the action as 'sign-in', if result.user and result.token is true
+  we call the onSignIn method from props passing in the result as the argument.
+  We get a response from the server and if the result contains the matching username
+  and password we pass that to the onSignIn method. The onSignIn method saves the
+  user token to local storage on the browser and sets state setting user from null
+  to result.user(containing userId and username) resulting in a rerender of the
+  App. Then the browser displays the
+  Home component showing the gif.
+
+User can stay signed in(even on refresh)
+  - When we refresh the App on sign in, App component mounts then componentDidMount
+  gets mounts once. It chceks the local storage and gets items 'react-context-jwt'
+  We assign the const user to the decoded token. We then setState with the user
+  and isAuthorizing to false. Which causes a rerender and we render the Homepage
+  gif again.
+
+User can sign out
+  - Once home page gif/component has been displayed. If need to sign out, user
+  can click the sign out button on the nav bar, which will call the handleSignOut
+  method which removes the token that was stored in local storage and calls
+  setState setting user back to null, which will then re render the app back to
+  the home screen.
