@@ -1,0 +1,6 @@
+User sign up
+  - The Auth-Form component renders the input elements for the user name and the
+  password along with an anchor tag and the submit button for the form. Within
+  the form component there are a few methods used to handle changes to the form's
+  state which is an object containing properties of username and password. Both
+  properties are set to an initial value of an empty string.
